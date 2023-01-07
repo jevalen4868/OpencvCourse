@@ -9,10 +9,24 @@ using namespace std;
 
 /////////////////  Images  //////////////////////
 
+//int main() {
+//    string path = "/Users/jeremyvalenzuela/CLionProjects/OpencvCourse/Resources/cards.jpg";
+//    Mat img = imread(path);
+//    imshow("Image", img);
+//    waitKey(0);
+//    return 0;
+//}
+
 int main() {
-    string path = "/Users/jeremyvalenzuela/CLionProjects/OpencvCourse/Resources/cards.jpg";
-    Mat img = imread(path);
-    imshow("Image", img);
-    waitKey(0);
+    VideoCapture cap(1);
+    Mat img;
+
+    while (true) {
+
+        cap.read(img);
+        imshow("Image", img);
+        waitKey(1);
+
+    }
     return 0;
 }
